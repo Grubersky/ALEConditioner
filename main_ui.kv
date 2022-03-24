@@ -2,7 +2,7 @@ FloatLayout:
     Image:
         size_hint: 0.9, 0.9
         source: "Backdrop.png"
-        pos_hint: {"center_x": 0.5, "center_y": 0.65}
+        pos_hint: {"center_x": 0.5, "center_y": 0.675}
         opacity: 0.9
 
     MDChip:
@@ -12,10 +12,17 @@ FloatLayout:
         text: 'ALE'
         color: 0.25, 0.25, 0.25, 1
         icon: ''
-        pos_hint: {"center_x": .5, "center_y": .225}
+        pos_hint: {"center_x": 0.5, "center_y": 0.275}
         opacity: 0.9
 
     MDRaisedButton:
         text: "Clean Up!"
-        pos_hint: {'center_x': 0.5, 'center_y': 0.075}
+        pos_hint: {'center_x': 0.5, 'center_y': 0.125}
         on_release: app.reconditioningale()
+
+    MDLabel:
+        text: "V 1.0.1"
+        font_size: 12
+        halign: "center"
+        pos_hint: {"center_x": 0.5, "center_y": 0.025}
+        opacity: 0.5

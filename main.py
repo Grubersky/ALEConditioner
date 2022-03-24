@@ -1,6 +1,6 @@
 from kivy import Config
 Config.set('graphics', 'width', '250')
-Config.set('graphics', 'height', '350')
+Config.set('graphics', 'height', '375')
 Config.set('graphics', 'resizable', False)
 Config.set('kivy', 'window_icon', 'ale_icon.png')
 from kivymd.app import MDApp
