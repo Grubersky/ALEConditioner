@@ -54,12 +54,12 @@ class DragAndDrop(MDApp):
             self.dialog.open()
 
         else:
-            # read input file
+            print('read input file')
             print(file_path_dc)
-            input_ale = open(file_path_dc, "rt")
-            # read file contents to string
+            input_ale = open(file_path_dc, "rt", encoding='utf-8')
+            print('read file contents to string')
             data = input_ale.read()
-            # replace all occurrences of the required string
+            print('replace all occurrences of the required string')
             data = data.replace('ä', 'ae')
             data = data.replace('ö', 'oe')
             data = data.replace('ü', 'ue')
@@ -70,14 +70,14 @@ class DragAndDrop(MDApp):
             data = data.replace('“', '"')
             data = data.replace('ß', 'ss')
             data = data.replace("‘", "'")
-            # close the input file
+            print('close the input file')
             input_ale.close()
 
-            # open the input file in write mode
-            input_ale = open(file_path_dc, "wt")
-            # overrite the input file with the resulting data
+            print('open the input file in write mode')
+            input_ale = open(file_path_dc, "wt", encoding='utf-8')
+            print('overrite the input file with the resulting data')
             input_ale.write(data)
-            # close the file
+            print('close the file')
             input_ale.close()
 
             self.dialog = MDDialog(
