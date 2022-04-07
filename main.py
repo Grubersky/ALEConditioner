@@ -9,6 +9,7 @@ from kivy.lang import Builder
 from kivy.core.window import Window
 from kivy.properties import StringProperty
 import os
+import unicodedata
 
 file_path_dc = ('')
 
@@ -66,10 +67,8 @@ class DragAndDrop(MDApp):
             data = data.replace('Ä', 'Ae')
             data = data.replace('Ö', 'Oe')
             data = data.replace('Ü', 'Ue')
-            data = data.replace('„', '"')
-            data = data.replace('“', '"')
             data = data.replace('ß', 'ss')
-            data = data.replace("‘", "'")
+            data = unicodedata.normalize('NFKD', data).encode('ascii', 'ignore').decode()
             print('close the input file')
             input_ale.close()
 
