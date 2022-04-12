@@ -45,9 +45,6 @@ class DragAndDrop(MDApp):
             self.dialog = MDDialog(text="Hmm.. that doesn't seem to be an ALE.", radius=[10, 10, 10, 10], )
             self.dialog.open()
 
-
-
-
     def reconditioningale(self):
         if file_path_dc == (''):
             print('No file selected')
