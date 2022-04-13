@@ -16,4 +16,3 @@ Avid ALE Conditioner
 
     Dependencies:
         - KivyMD
-        - pyinstaller-versionfile 
